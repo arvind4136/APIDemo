@@ -1,0 +1,255 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 15,
+        "name": "verify if place is added sucessfully",
+        "description": "",
+        "id": "add-place-validations;verify-if-place-is-added-sucessfully;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4710561800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Add place payload with \"sindhu\" \"telugu\" \"hyderabad telangana\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sindhu",
+                  "offset": 24
+                },
+                {
+                  "val": "telugu",
+                  "offset": 33
+                },
+                {
+                  "val": "hyderabad telangana",
+                  "offset": 42
+                }
+              ],
+              "location": "AddPlacecode.add_place_payload_with(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11220827700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user calls\"AddPlaceAPI\" using \"POST\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AddPlaceAPI",
+                  "offset": 11
+                },
+                {
+                  "val": "POST",
+                  "offset": 31
+                }
+              ],
+              "location": "AddPlacecode.user_calls_using_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11040499,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Response should be have status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 39
+                }
+              ],
+              "location": "AddPlacecode.response_should_be_have_status_code_is(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2174814401,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"status\" in response body  is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 1
+                },
+                {
+                  "val": "OK",
+                  "offset": 31
+                }
+              ],
+              "location": "AddPlacecode.something_in_response_body_is_something(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 383300100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify placeid created  matches to \"sindhu\" using \"getPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sindhu",
+                  "offset": 36
+                },
+                {
+                  "val": "getPlaceAPI",
+                  "offset": 51
+                }
+              ],
+              "location": "AddPlacecode.verify_placeid_created_matches_to_using(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 2,
+            "name": "@Regression"
+          },
+          {
+            "line": 2,
+            "name": "@Addplace"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 220600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforemethod()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "verify delete place api functionality",
+        "description": "",
+        "id": "add-place-validations;verify-delete-place-api-functionality",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5988200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "DeletePlace payload",
+            "match": {
+              "location": "AddPlacecode.deleteplace_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1255787300,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user calls\"DeletePlaceAPI\" using \"POST\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DeletePlaceAPI",
+                  "offset": 11
+                },
+                {
+                  "val": "POST",
+                  "offset": 34
+                }
+              ],
+              "location": "AddPlacecode.user_calls_using_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1142600,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Response should be have status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 39
+                }
+              ],
+              "location": "AddPlacecode.response_should_be_have_status_code_is(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 36132301,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "\"status\" in response body  is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 1
+                },
+                {
+                  "val": "OK",
+                  "offset": 31
+                }
+              ],
+              "location": "AddPlacecode.something_in_response_body_is_something(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 18,
+            "name": "@Deleteplace"
+          },
+          {
+            "line": 18,
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Add place validations",
+    "description": "",
+    "id": "add-place-validations",
+    "keyword": "Feature",
+    "uri": "addplace.feature"
+  }
+]
